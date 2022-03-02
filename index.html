@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel = "icon" href = "images/icon.jpg" 
+        type = "image/x-icon">
+		<title>The maze runner</title>
+		<script type="text/javascript">
+		function togglePlay() {
+  var myAudio = document.getElementById("myAudio");
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
+			</script>
+    </head>
+    <body onLoad="draw();">
+	<h1> THE MAZE RUNNER </h1>
+			<div class="canvas">
+			
+            <canvas width="324px" height="324px" id="labirint" onclick="sweet_aleart()"></canvas>
+				
+       
+				<div class="button">
+					<button onclick="animation();">GO</button>
+					<button id="button2" onclick="refreshPage();">AGAIN</button>
+				</div> 
+				</div>
+		
+		<audio 
+		id="myAudio" src="audio/Runner.mp3	" preload="auto">
+		</audio>
+		
+		<input type="button" id="button1" value="sound" onclick="togglePlay()" />
+  <script src="js/maze.js"></script>
+  <script src="js/sweetaleart.js"></script> 
+  <script src="js/sweetaleartcode.js"></script> 
+</body>
+	
+</html>
