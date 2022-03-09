@@ -4,7 +4,7 @@ function refreshPage(){
 var canvas = document.getElementById("labirint")
 			var canvas = document.getElementById("labirint");
 			var ctx = canvas.getContext("2d");
-			ctx.fillStyle="gray";
+			ctx.fillStyle="black";
 			ctx.fillRect(0,0, canvas.width,canvas.height);
 			
 				var vertices = [];
@@ -111,7 +111,6 @@ var canvas = document.getElementById("labirint")
 			ctx.lineTo(226, 114);
 			ctx.moveTo(242, 114);
 			ctx.lineTo(322, 114);
-			
 			ctx.moveTo(2, 130);
 			ctx.lineTo(34, 130);
 			ctx.moveTo(50, 130);
@@ -466,9 +465,6 @@ var canvas = document.getElementById("labirint")
 			ctx.fill();
 			ctx.strokeStyle = "white";
 			ctx.stroke();
-
-
-			
 
 			function calcWaypoints(vertices) {
 			    var waypoints = [];
