@@ -111,6 +111,7 @@ var canvas = document.getElementById("labirint")
 			ctx.lineTo(226, 114);
 			ctx.moveTo(242, 114);
 			ctx.lineTo(322, 114);
+			
 			ctx.moveTo(2, 130);
 			ctx.lineTo(34, 130);
 			ctx.moveTo(50, 130);
@@ -466,6 +467,9 @@ var canvas = document.getElementById("labirint")
 			ctx.strokeStyle = "white";
 			ctx.stroke();
 
+
+			
+
 			function calcWaypoints(vertices) {
 			    var waypoints = [];
 			    for (var i = 1; i < vertices.length; i++) {
@@ -486,7 +490,7 @@ var canvas = document.getElementById("labirint")
 			var t = 1;
 
 			function animation() {
-			    for (var i = 0; i <10; i++)
+			    for (var i = 5; i < 10; i++)
 			        animate();
 			}
 
@@ -500,10 +504,29 @@ var canvas = document.getElementById("labirint")
 			    ctx.strokeStyle = "#00FF00";
 			    ctx.stroke();
 			    t++;
-			    if (t >= points.length)
-			        for (var i = 0; i < 10; i++) {
+			   if (t >= points.length)
+			        for (var i =1; i < 10; i++) {
 			            deletThis();
 			        }
 			}
+			var d = 1;
+
+			function deletThis() {
+			    if (d < points.length - 1)
+			     requestAnimationFrame(deletThis);   
+			    ctx.strokeStyle = "black";
+			    ctx.beginPath();
+			    ctx.lineWidth = 4;
+			    ctx.moveTo(points[d - 1].x, points[d - 1].y);
+			    ctx.lineTo(points[d].x, points[d].y);
+			    ctx.stroke();
+			    if (d >= points.length)
+			        for (var i = 0; i < 10; i++) {
+			            deletThis();
+			        }
+			    d++;
+			}
+			
+	
 
 			

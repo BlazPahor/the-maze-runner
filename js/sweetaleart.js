@@ -5,8 +5,8 @@ function sweet_aleart(){
         title: 'This was made by Blaz Pahor',
         showConfirmButton: true,
         position: 'center',
-        confirmButtonColor: '#00A300',
-        iconColor: '#00A300',
+        confirmButtonColor: '#72b177',
+        iconColor: '#72b177',
 
     });
 }
