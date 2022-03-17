@@ -501,7 +501,7 @@ var canvas = document.getElementById("labirint")
 			    ctx.lineWidth = 4;
 			    ctx.moveTo(points[t - 1].x, points[t - 1].y);
 			    ctx.lineTo(points[t].x, points[t].y);
-			    ctx.strokeStyle = "#00FF00";
+			    ctx.strokeStyle = "#85c6b7";
 			    ctx.stroke();
 			    t++;
 			   if (t >= points.length)
