@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'MAZE RUNNER';
+  src: url("../font/MAZE_RUNNER.otf") format("opentype");
+}
+*{
+	  font-family: 'MAZE RUNNER';
+
+}
+body  {
+		font-family: 'MAZE RUNNER';
+	  background-image: url("../images/ozadje.jpg");
+	 background-repeat: no-repeat;
+	  background-size: auto;
+	  height: 100%;
+	  display:grid;
+	  place-items:center;
+		background-color:black;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding:10px 20px 10px 020px;
+	transition:0.5s;
+	cursor:pointer;
+	
+}
+button:hover {
+    background-color: white;
+    color: black;	
+}
+h1{
+	font-size:60px;
+	color: black;
+	width:max-content;
+	margin-bottom:10%;
+	
+}
+.canvas{
+height:max-content;
+width:max-content;
+padding:2%;
+box-shadow: 5px 5px 5px 5px black;
+backdrop-filter: blur(2px);
+}
+
+.button{
+		margin-top:100px;
+}
+
+#button2{
+float:right;
+}
+
+#button1{
+left: 2em;
+position:absolute;
+top:2em;
+cursor:pointer;
+
+}
+
+
+
+.toggle-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.toggle-button {
+ position: relative;
+ display: inline-block;
+ width: 70px;
+ height: 35px;
+ margin: 0;
+ vertical-align: top;
+ background: #ffffff;
+ border: 1px solid #85c6b7;
+ border-radius: 30px;
+ cursor: pointer;
+ transition: 1s;
+}
+
+.toggle-button::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 3px;
+  top: 1.5px;
+  width: 30px;
+  height: 30px;
+  background-color: #85c6b7;
+  border-radius: 50%;
+transition: all 1s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  transform: translateX(0);
+}
+
+.toggle-button:checked::after {
+  transform: translateX(calc(100% + 3px));
+  background-color: #fff;  
+}
+.toggle-button:checked {
+  background-color: #85c6b7;
+}
